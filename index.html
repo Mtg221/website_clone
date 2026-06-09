@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robbie Lens — Photographie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="logo" onclick="showPage('accueil')">Robbie<br>Lens |||</a>
+    <ul>
+      <li><a onclick="showPage('accueil')" data-page="accueil">Accueil</a></li>
+      <li><a onclick="showPage('apropos')" data-page="apropos">À propos</a></li>
+      <li><a onclick="showPage('tarifs')" data-page="tarifs">Tarifs</a></li>
+      <li><a onclick="showPage('portfolio')" data-page="portfolio">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <section id="page-accueil" class="page active">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Robbie Lens<br>Photographie</h1>
+        <p>Où professionalisme s'allie avec passion. Depuis plus de 5 ans, j'exercemon metier avec la passion qui m'anime: capturer l'essence de chaque instant.</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">UN PROJET ? ÉCRIVEZ-MOI</button>
+      </div>
+      <div class="hero-img">
+        <img src="images/robbie-lens.png" alt="portrait" />
+      </div>
+    </div>
+
+    <div class="section-white">
+      <h2>Mon dernier projet</h2>
+      <div class="grid">
+        <img src="images/accueil/element-1.png" alt="" />
+        <img src="images/accueil/element-2.png" alt="" />
+        <img src="images/accueil/element-3.png" alt="" />
+        <img src="images/accueil/element-4.png" alt="" />
+        <img src="images/accueil/element-5.png" alt="" />
+        <img src="images/accueil/element-6.png" alt="" />
+      </div>
+      <button class="btn outline" onclick="showPage('portfolio')">VOIR MON PORTFOLIO</button>
+    </div>
+
+    <div class="section-dark" id="contact">
+      <h2>Parlons de votre projet</h2>
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="field"><label>nom</label><input type="text" id="nom" /></div>
+          <div class="field"><label>email</label><input type="email" id="email" /></div>
+        </div>
+        <div class="field"><label>message</label><textarea id="message" rows="6"></textarea></div>
+        <button type="submit" class="btn">ENVOYER</button>
+      </form>
+    </div>
+
+    <footer>
+      <span class="logo">Robbie<br>Lens |||</span>
+      <div class="socials">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </div>
+    </footer>
+  </section>
+
+  <section id="page-apropos" class="page">
+    <div class="section-dark">
+      <div class="portraits">
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+        <img src="images/robbie-lens.png" alt="" />
+      </div>
+    </div>
+
+    <div class="section-white">
+      <h2 class="accent">À propos</h2>
+      <div class="card">
+        <p>Photographe depuis plus de 5 ans, je réalise des reportages aux photos dynamiques et pertinentes pour vos projets de communication. Créativité, qualité, et sérénité pour vous ! Je gere tout, depuis la direction artistique, la realisation du reportage jusqu'a la livraison de vos photos retouchées, pretes à l'emploi.</p>
+        <h3>Services</h3>
+        <ul>
+          <li>Portrait seul ou à plusieurs</li>
+          <li>Shooting mode</li>
+          <li>Retouches sur mesure</li>
+          <li>Developpement</li>
+        </ul>
+      </div>
+      <button class="btn outline" onclick="showPage('portfolio')">VOIR MON PORTFOLIO</button>
+    </div>
+
+    <footer>
+      <span class="logo">Robbie<br>Lens |||</span>
+      <div class="socials">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </div>
+    </footer>
+  </section>
+
+  <section id="page-portfolio" class="page">
+    <div class="page-header">
+      <h2>Portfolio</h2>
+    </div>
+    <div class="section-white">
+      <div class="filters">
+        <span class="filter active" onclick="filter('paysages', this)">Paysages</span>
+        <span class="filter" onclick="filter('portraits', this)">Portraits</span>
+      </div>
+      <div class="grid" id="cat-paysages">
+        <img src="images/portfolio/paysage1.jpg" alt="" />
+        <img src="images/portfolio/paysage1.jpg" alt="" />
+        <img src="images/portfolio/paysage1.jpg" alt="" />
+        <img src="images/portfolio/paysage1.jpg" alt="" />
+        <img src="images/portfolio/paysage5.jpg" alt="" />
+        <img src="images/portfolio/paysage6.jpg" alt="" />
+      </div>
+      <div class="grid" id="cat-portraits">
+        <img src="images/portfolio/portrait1.jpg" alt="" />
+        <img src="images/portfolio/portrait2.jpg" alt="" />
+        <img src="images/portfolio/portrait3.jpg" alt="" />
+        <img src="images/portfolio/portrait4.jpg" alt="" />
+        <img src="images/portfolio/portrait5.jpg" alt="" />
+        <img src="images/portfolio/portrait6.jpg" alt="" />
+      </div>
+    </div>
+    <footer>
+      <span class="logo">Robbie<br>Lens |||</span>
+      <div class="socials">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </div>
+    </footer>
+  </section>
+
+  <section id="page-tarifs" class="page">
+    <div class="page-header">
+      <h2>Tarifs</h2>
+    </div>
+    <div class="section-white">
+      <div class="cards">
+        <div class="card">
+          <div class="price">350€ <span>/ demi journée</span></div>
+          <h3>Shooting photo</h3>
+          <p>Pour capturer vos moments les plus précieux et garder un souvenir imperissable.Je me deplace en Ile de France pour realiser vos photos.</p>
+          <button class="btn" onclick="showPage('accueil')">Contactez-moi</button>
+        </div>
+        <div class="card">
+          <div class="price">550€ <span>/ demi journée</span></div>
+          <h3>Retouches</h3>
+          <p>Vous souhaitez retoucher vos photos pour un resulat professionnel? Beneficier d'un rendu optimal pour vos publications.</p>
+          <button class="btn" onclick="showPage('accueil')">Contactez-moi</button>
+        </div>
+        <div class="card">
+          <div class="price">400€ <span>/ album A4</span></div>
+          <h3>Album photos</h3>
+          <p>Partagez avec vos proches et vos clients les photos des moments partages ensemble a travers un album photo</p>
+          <button class="btn" onclick="showPage('accueil')">Contactez-moi</button>
+        </div>
+        <div class="card">
+          <h3>Retouches</h3>
+          <p>Rendu professionnel optimal pour vos publications.</p>
+          <button class="btn" onclick="showPage('accueil')">Contactez-moi</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Désignation</th><th>Quantité</th><th>Prix</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Retouches photo</td><td>Studio × 800 photos</td><td>3 200€</td></tr>
+          <tr><td>Assistant photo</td><td>Lumière × 2 sets studio</td><td>1 500€ / journée</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <span class="logo">Robbie<br>Lens |||</span>
+      <div class="socials">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+      </div>
+    </footer>
+  </section>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
